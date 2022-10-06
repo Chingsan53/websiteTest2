@@ -1,7 +1,7 @@
-module.exports = function(eleventyConfig) {
-  return {
-    dir: {
-      output: "dist"
-    }
-  }
-};
+module.exports = function (eleventyConfig) {
+  eleventyConfig.setUseGitIgnore(false)
+  eleventyConfig.setBrowserSyncConfig({
+    notify: true,
+    open: true
+  })
+}
