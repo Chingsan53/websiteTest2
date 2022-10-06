@@ -31,7 +31,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Build 11ty
-        run: |npm run production
+        run: npm fund
           echo Add other actions to build,
           echo test, and deploy your project.
       - name: Deploy to Netlify branch
