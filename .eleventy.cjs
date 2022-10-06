@@ -5,3 +5,10 @@ module.exports = function (eleventyConfig) {
     open: true
   })
 }
+module.exports = function(eleventyConfig) {
+  return {
+    dir: {
+      output: "_includes"
+    }
+  }
+};
