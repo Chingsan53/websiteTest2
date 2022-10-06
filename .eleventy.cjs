@@ -1,5 +1,5 @@
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setUseGitIgnore(false)
+  eleventyConfig.setUseGitIgnore(true)
   eleventyConfig.setBrowserSyncConfig({
     notify: true,
     open: true
