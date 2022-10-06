@@ -7,6 +7,10 @@
     "start": "npx @11ty/eleventy --serve --config=.eleventy.cjs",
     "test": "vnu --skip-non-html --Werror _site/"
   },
+  "scripts": {
+    "start": "eleventy --server",
+    "build": "NODE_ENV=production eleventy --pathprefix 'book-blog'"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Chingsan53/cpsc349-project1-group24-1.git"
