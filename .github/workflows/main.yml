@@ -1,23 +1,16 @@
-name: Eleventy Build
-on: 
-  push:
-    paths-ignore:
-      - README.md
+name: Test Build
+on: [push]
 
 jobs:
-  build-deploy:
-    name: Eleventy Build
-    runs-on: ubuntu-latest
+  test:
+    runs-on: ubuntu-18.04
     steps:
-      - name: Git Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@master
       - name: Build
-        uses: TartanLlama/actions-eleventy@v1.3
-        with:
-          args: --output _dist
-          install_dependencies: true
+        uses: TartanLlama/actions-eleventy@master
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          publish_dir: ./_site 
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+        uses: peaceiris/actions-gh-pages@v1.1.0
+        env:
+          PUBLISH_DIR: _site 
+          PUBLISH_BRANCH: gh-pages
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
