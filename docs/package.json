@@ -1,0 +1,29 @@
+{
+  "name": "cpsc349-project1",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CPSC 349 - Fall 2022 - Project 1",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve --config=.eleventy.cjs",
+    "test": "vnu --skip-non-html --Werror _site/"
+  },
+  "scripts": {
+    "start": "eleventy --server",
+    "build": "NODE_ENV=production eleventy --pathprefix 'book-blog'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chingsan53/cpsc349-project1-group24-1.git"
+  },
+  "author": "Kenytt Avery",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/Chingsan53/cpsc349-project1-group24-1.git"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.2",
+    "dotenv": "^16.0.2",
+    "pexels": "^1.3.1"
+  }
+}

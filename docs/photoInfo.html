@@ -1,0 +1,92 @@
+---
+layout: base 
+pagination:
+    data: photos.u5o7nq1.media
+    size: 1
+    alias: photo
+permalink: '/photoInfo/{{photo.id}}/'
+---
+
+<header style=" text-align:center;  font-family: old english;  font-size: 20px; background-color: lightgray; ">
+
+    {% for item in pagination.items %}
+
+        <h1>{{ item.alt }} </h1>
+
+    {% endfor %}
+
+    <h2><a href="/">HOME</a></h2>
+ 
+    <table style="margin-left:auto;margin-right:auto">
+        <tr>
+            <th><a href="{{ pagination.href.first }}">First</a></th>
+    
+            {% if pagination.href.previous %}
+        
+            <th><a href="{{ pagination.href.previous }}">Previous</a><th>
+        
+            {% else %}
+        
+            <th>previous</th>
+        
+            {% endif %}
+       
+            <th>Page {{ pagination.pageNumber | plus: 1 }}</th>
+    
+            {% if pagination.href.next %}
+        
+            <th><a href="{{ pagination.href.next }}">Next</a></th>
+        
+            {% else %}
+        
+             <th>Next </th>
+        
+            {% endif %}
+    
+            <th><a href="{{ pagination.href.last }}" style="text-align:right">Last</a></th>
+        </tr>
+
+    </table>
+    
+</header>
+
+<hr style="height:30px">
+
+<main>
+
+    
+        {% for item in pagination.items %}
+        
+        <img src ="{{item.src.large2x}}" 
+             alt="art" 
+             style="text-align:center;height:1100px; width:1050px;border:20px solid {{item.avg_color}}"
+             title="{{item.alt}}"
+             
+        >
+
+        {% endfor %}
+
+
+</main>
+
+<hr style="height:30px">
+
+<footer style=" text-align:center;  font-family: old english;  font-size: 20px; background-color: lightgray; ">
+  
+    {% for item in pagination.items %}
+  
+        <h3> Photographer Name: {{item.photographer}}</h3>
+        <h4> Photographer ID: {{item.id}}</h4>
+        <h4> Photo ID: {{item.photographer_id}}</h4>
+        <h4> Photographer URL: {{item.photographer_url}}</h4>
+
+    {% endfor %}
+
+    <a href="/">Home</a>
+    
+    
+            <h4><a href="https://www.pexels.com">Photos provided by Pexels</a></h4>  
+          
+
+
+</footer>
