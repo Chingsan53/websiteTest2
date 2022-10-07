@@ -1,0 +1,48 @@
+---
+layout: base
+title: SUNSETS
+---
+<header style=" text-align:center;  font-family: old english;  font-size: 20px; background-color: lightgray; ">
+    
+    <h1>{{ title }} </h1>
+
+    <a href="../index.html">HOME</a>
+
+    <br>
+
+    <a href="../about/index.html" style="text-align: center">About Us</a>
+
+</header>
+
+<hr style="height:30px">
+
+<main style=" text-align:center;  font-family: old english;  font-size: 20px; background-color: lightgray; ">
+
+
+
+        <div>
+        {% for photo in photos.u5o7nq1.media -%}
+
+        <a href="photoInfo/{{photo.id}}/index.html"><img src ="{{photo.src.small}}"
+             alt="art"
+             style="height:150px; width:150px; border:10px solid {{photo.avg_color}}"
+             title="{{photo.alt}}"
+        ></a>
+
+        {% endfor -%}
+
+        </div>
+    
+
+
+</main>
+
+<hr style="height:30px">
+
+<footer style=" text-align:center;  font-family: old english;  font-size: 20px; background-color: lightgray; ">
+    <p>
+        <small>
+            <a href="https://www.pexels.com">Photos provided by Pexels</a>
+        </small>
+    </p>
+</footer>
